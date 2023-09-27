@@ -48,6 +48,15 @@ on:
   push:
     branches: [ "master" ]
   pull_request:
+  workflow_dispatch:
+    inputs:
+      environment:
+        type: environment
+        description: Environment to run
+        required: false
+        default: 'dev'
+     
+  
 
 permissions:
   contents: read
